@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: simranpipelinesjavascriptdockerwow 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simranpipelinesjavascriptdockerwow
+  template:
+    metadata:
+      labels:
+        app: simranpipelinesjavascriptdockerwow 
+    spec:
+      containers:
+        - name: simranpipelinesjavascriptdockerwow 
+          image: mycontainerregistry287.azurecr.io/simranpipelinesjavascriptdockerwow
+          ports:
+          - containerPort: 8080
